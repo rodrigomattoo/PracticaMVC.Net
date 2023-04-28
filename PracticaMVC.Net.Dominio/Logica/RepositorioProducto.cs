@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PracticaMVC.Net.Dominio.Logica
 {
-    internal class RepositorioProducto : IRepositorioProducto
+    public class RepositorioProducto : IRepositorioProducto
     {
         private static List<Producto> _productos = new List<Producto>();
 

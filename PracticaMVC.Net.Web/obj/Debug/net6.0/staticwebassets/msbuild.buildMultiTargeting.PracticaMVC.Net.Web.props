@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\PracticaMVC.Net.Web.props" />
-</Project>

@@ -20,5 +20,9 @@ namespace PracticaMVC.Net.Web.Controllers
             iRepositorioProducto.Eliminar(id);
             return RedirectToAction("Index");
         }
+
+        public IActionResult Agregar() {
+            return View();
+        }
     }
 }

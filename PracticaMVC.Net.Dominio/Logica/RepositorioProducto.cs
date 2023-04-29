@@ -48,5 +48,16 @@ namespace PracticaMVC.Net.Dominio.Logica
             _productos.Add(new Producto(3, "Tablet", 250000.00));
             _productos.Add(new Producto(4, "Notebook", 250000.00));
         }
+
+        public void Agregar(Producto producto)
+        {
+            producto.Id = this.generarId();
+            _productos.Add(producto);
+        }
+
+        private int generarId()
+        {
+            return _productos.Count();
+        }
     }
 }

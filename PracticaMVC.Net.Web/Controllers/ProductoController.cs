@@ -20,5 +20,19 @@ namespace PracticaMVC.Net.Web.Controllers
             iRepositorioProducto.Eliminar(id);
             return RedirectToAction("Index");
         }
+
+        public IActionResult Agregar() {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Agregar(IFormCollection form)
+        {
+            Producto producto = new Producto();
+            producto.Descripcion = form["Descripcion"];
+            producto.Precio = double.Parse(form["Precio"]);
+            this.iRepositorioProducto.Agregar(producto);
+            return RedirectToAction("Index");
+        }
     }
 }

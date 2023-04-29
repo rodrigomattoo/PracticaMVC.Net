@@ -16,10 +16,11 @@
                     <td>@producto.Id</td>
                     <td>@producto.Descripcion</td>
                     <td>@producto.Precio</td>
-                    <td>@Html.ActionLink("Eliminar", "Eliminar", "Producto", new {id = producto.Id})</td>
+                    <td>@Html.ActionLink("Eliminar", "Eliminar", "Producto", new {id = producto.Id}, new {@class = "btn btn-danger"})</td>
                 </tr>
             }
         </tbody>
     </table>
+    @Html.ActionLink("Agregar", "Agregar", "Producto")
 </div>
 

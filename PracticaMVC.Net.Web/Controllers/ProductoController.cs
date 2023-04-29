@@ -15,5 +15,10 @@ namespace PracticaMVC.Net.Web.Controllers
             List<Producto> productos =  this.iRepositorioProducto.ObtenerProductos();
             return View(productos);
         }
+
+        public ActionResult Eliminar(int id) {
+            iRepositorioProducto.Eliminar(id);
+            return RedirectToAction("Index");
+        }
     }
 }

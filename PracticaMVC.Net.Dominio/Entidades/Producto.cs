@@ -12,6 +12,10 @@ namespace PracticaMVC.Net.Dominio.Entidades
         public string Descripcion { get; set; }
         public double Precio { get; set;}
 
+        public Producto()
+        {
+
+        }
         public Producto(int id, string descripcion, double precio)
         {
             this.Id = id;

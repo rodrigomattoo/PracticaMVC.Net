@@ -15,6 +15,26 @@ namespace PracticaMVC.Net.Dominio.Logica
             Inicializar();
         }
 
+        public void Eliminar(int id)
+        {
+            var poder = _productos.FirstOrDefault(x => x.Id == id);
+            if (poder != null)
+            {
+                _productos.Remove(poder);
+            }
+        }
+
+        private Producto ObtenerProductoPorId(int id)
+        {
+            Producto producto = new Producto();
+            foreach (Producto p in _productos)
+            {
+                p.Id = id;
+                producto = p;
+            }
+            return producto;
+        }
+
         public List<Producto> ObtenerProductos()
         {
             return _productos;
@@ -22,10 +42,11 @@ namespace PracticaMVC.Net.Dominio.Logica
 
         private void Inicializar()
         {
-            _productos.Add(new Producto(1,"SmartTv",250000.00));
-            _productos.Add(new Producto(1, "SmartPhone", 250000.00));
-            _productos.Add(new Producto(1, "Tablet", 250000.00));
-            _productos.Add(new Producto(1, "Notebook", 250000.00));
+            _productos.Clear();
+            _productos.Add(new Producto(1, "SmartTv", 250000.00));
+            _productos.Add(new Producto(2, "SmartPhone", 250000.00));
+            _productos.Add(new Producto(3, "Tablet", 250000.00));
+            _productos.Add(new Producto(4, "Notebook", 250000.00));
         }
     }
 }

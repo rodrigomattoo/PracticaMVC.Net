@@ -1,3 +1,5 @@
 .vs/
 PracticaMVC.Net.Dominio/bin/
 PracticaMVC.Net.Web/bin/
+ PracticaMVC.Net.Web/obj/
+ PracticaMVC.Net.Dominio/obj/

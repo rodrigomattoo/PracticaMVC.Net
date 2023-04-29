@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "PracticaMVC.Net.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/PracticaMVC.Net.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PracticaMVC.Net.Dominio.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PracticaMVC.Net.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../PracticaMVC.Net.Dominio/PracticaMVC.Net.Dominio.csproj",
+      "msbuildProject": "../PracticaMVC.Net.Dominio/PracticaMVC.Net.Dominio.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "PracticaMVC.Net.Dominio >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\AyiGroup\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Rodrigo\\Unlam\\Progra Web III\\PracticaMVC.Net.Web\\PracticaMVC.Net.Dominio\\PracticaMVC.Net.Dominio.csproj": {
+              "projectPath": "D:\\Rodrigo\\Unlam\\Progra Web III\\PracticaMVC.Net.Web\\PracticaMVC.Net.Dominio\\PracticaMVC.Net.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

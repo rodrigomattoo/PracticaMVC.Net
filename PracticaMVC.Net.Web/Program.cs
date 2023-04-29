@@ -1,7 +1,10 @@
+using PracticaMVC.Net.Dominio.Logica;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IRepositorioProducto, RepositorioProducto>();
 
 var app = builder.Build();
 
